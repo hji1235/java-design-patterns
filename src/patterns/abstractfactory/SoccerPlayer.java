@@ -1,4 +1,4 @@
-package patterns.factory.abstractfactory;
+package patterns.abstractfactory;
 
 public class SoccerPlayer implements Player{
 }

@@ -1,4 +1,4 @@
-package patterns.factory.abstractfactory;
+package patterns.abstractfactory;
 
 public class SoccerStaffFactory implements StaffFactory{
     @Override

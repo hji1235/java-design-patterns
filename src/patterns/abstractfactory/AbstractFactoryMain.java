@@ -1,4 +1,4 @@
-package patterns.factory.abstractfactory;
+package patterns.abstractfactory;
 
 public class AbstractFactoryMain {
     public static void main(String[] args) {
