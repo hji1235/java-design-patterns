@@ -8,18 +8,18 @@ public class BridgeMain {
 
         // 간단 출력
         Draft draft = new Draft(title, author, content);
-        SimpleDisplay simpleDisplay = new SimpleDisplay();
+        Display simpleDisplay = new SimpleDisplay();
         draft.print(simpleDisplay);
 
         // 캡션 출력
-        CaptionDisplay captionDisplay = new CaptionDisplay();
+        Display captionDisplay = new CaptionDisplay();
         draft.print(captionDisplay);
 
         String publisher = "북약출판";
         int cost = 1000;
 
         // 확장된 기능으로 간단 및 캡션 출력
-        Publication publication = new Publication(title, author, content, publisher, cost);
+        Draft publication = new Publication(title, author, content, publisher, cost);
         publication.print(simpleDisplay);
         publication.print(captionDisplay);
     }
