@@ -5,6 +5,7 @@ import java.util.List;
 
 public class ShoppingCart {
     List<Item> items;
+    PaymentStrategy paymentStrategy;
 
     public ShoppingCart() {
         this.items = new ArrayList<>();
@@ -12,10 +13,6 @@ public class ShoppingCart {
 
     public void addItem(Item item) {
         this.items.add(item);
-    }
-
-    public void removeItem(Item item) {
-        this.items.remove(item);
     }
 
     public int calculateTotal() {
@@ -26,7 +23,11 @@ public class ShoppingCart {
         return sum;
     }
 
-    public void pay(PaymentStrategy paymentStrategy) {
+    public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
+        this.paymentStrategy = paymentStrategy;
+    }
+
+    public void pay() {
         int amount = calculateTotal();
         paymentStrategy.pay(amount);
     }
